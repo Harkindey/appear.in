@@ -1,0 +1,14 @@
+header.top-line {
+  padding-left:82px;
+}
+
+div.content-wrapper {
+  width:calc(100% - 65px);
+  float:right;
+}
+body > div.container > section.frontpage > section.frontpage-header > header {
+  -webkit-app-region: drag!important;
+}
+body > div.wrapper.frontpage-content-wrapper > div > div > main > header > div > div.top-bar-button.contacts-button.selected {
+  margin-left: 20px;
+}

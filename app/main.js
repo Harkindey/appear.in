@@ -74,10 +74,12 @@ app.on('ready', () => {
     app_page.on('dom-ready', () => {
 
         // Stock style additions
-        app_page.insertCSS(fs.readFileSync(path.join(__dirname, 'style/app.css'), 'utf8'));
+
 
         // MacOS Logo offset
-        if (process.platform == 'darwin') { app_page.insertCSS('header.top-line{padding-left:76px;}div.content-wrapper{width:calc(100% - 65px);float:right;}'); }
+        if (process.platform == 'darwin') {
+          app_page.insertCSS(fs.readFileSync(path.join(__dirname, 'style/app_mac_os.css'), 'utf8'));
+        }
 
         mainWindow.show();
     });
