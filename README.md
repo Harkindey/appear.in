@@ -9,12 +9,6 @@
 <br>
 <br>
 
-# Screenshots
-
-[<img alt='Appear.in' src="https://raw.githubusercontent.com/Meadowcottage/Appear.in/master/build/Screenshot-light-1.png">](https://github.com/Meadowcottage/Appear.in/releases)
-
-[<img alt='Appear.in' src="https://raw.githubusercontent.com/Meadowcottage/Appear.in/master/build/Screenshot-light-2.png">](https://github.com/Meadowcottage/Appear.in/releases)
-
 ## Downloads
 > Downloads can be found on the [releases page](https://github.com/Meadowcottage/Appear.in/releases)
 
