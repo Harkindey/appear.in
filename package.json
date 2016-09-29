@@ -9,7 +9,7 @@
     "dist": "npm run compile && build"
   },
   "build": {
-    "appId": "uk.meadowcottage.Appear_in",
+    "appId": "xyz.meadowcottage.Appear_in",
     "category": "public.app-category.social",
     "productName": "Appear.in",
     "dmg": {
