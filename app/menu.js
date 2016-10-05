@@ -105,21 +105,26 @@ var template_win = [{
     label: 'Help',
     role: 'help',
     submenu: [{
-        label: 'About Ionic-Creator',
+        label: 'About Appear.in',
         click: function() {
-            require('electron').shell.openExternal("https://github.com/Meadowcottage/Ionic-Creator/releases/tag/" + app_version)
+            require('electron').shell.openExternal("https://github.com/Meadowcottage/Appear.in/releases/tag/" + app_version)
         }
     }, {
-        label: 'View Ionic-Creator',
+        label: 'Version ' + app_version,
+        enabled: false
+    }, {
+        type: 'separator'
+    }, {
+        label: 'View Appear.in',
         click: function() {
-            require('electron').shell.openExternal("https://creator.ionic.io/")
+            require('electron').shell.openExternal("https://appear.in")
         }
     }, {
         type: 'separator'
     }, {
         label: 'Changelog',
         click: function() {
-            require('electron').shell.openExternal("https://github.com/Meadowcottage/Ionic-Creator/releases/tag/" + app_version)
+            require('electron').shell.openExternal("https://github.com/Meadowcottage/Appear.in/releases/tag/" + app_version)
         }
     }]
 }];
@@ -233,21 +238,26 @@ var template_osx = [{
     label: 'Help',
     role: 'help',
     submenu: [{
-        label: 'About Ionic-Creator',
+        label: 'About Appear.in',
         click: function() {
-            require('electron').shell.openExternal("https://github.com/Meadowcottage/Ionic-Creator/releases/tag/" + app_version)
+            require('electron').shell.openExternal("https://github.com/Meadowcottage/Appear.in/releases/tag/" + app_version)
         }
     }, {
-        label: 'View Ionic-Creator',
+        label: 'Version ' + app_version,
+        enabled: false
+    }, {
+        type: 'separator'
+    }, {
+        label: 'View Appear.in',
         click: function() {
-            require('electron').shell.openExternal("https://creator.ionic.io/")
+            require('electron').shell.openExternal("https://appear.in")
         }
     }, {
         type: 'separator'
     }, {
         label: 'Changelog',
         click: function() {
-            require('electron').shell.openExternal("https://github.com/Meadowcottage/Ionic-Creator/releases/tag/" + app_version)
+            require('electron').shell.openExternal("https://github.com/Meadowcottage/Appear.in/releases/tag/" + app_version)
         }
     }]
 }];
