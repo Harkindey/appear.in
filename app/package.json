@@ -1,27 +1,28 @@
 {
-  "name": "Appear.in",
-  "productName": "Appear.in",
-  "version": "1.0.1",
-  "description": "Electron web app for the Ionic creator.",
-  "private": true,
-  "main": "main.js",
-  "author": "[MEADOW_DEV] <bendixon50@gmail.com> (http://twitter.com/Meadowcottage13)",
-  "license": "GNU General Public License",
-  "homepage": "https://github.com/meadowcottage/Appear.in/",
-  "keywords": [
-    "Electron",
-    "Appear.in"
-  ],
-  "bugs": {
-    "url": "https://github.com/meadowcottage/Appear.in/issues/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/meadowcottage/Appear.in.git"
-  },
-  "dependencies": {
-    "electron-config": "^0.2.1",
-    "electron-dl": "^1.3.0",
-    "electron-is-dev": "^0.1.2"
-  }
+    "name": "appear.in",
+    "productName": "appear.in",
+    "version": "1.0.1",
+    "description": "The unofficial electron app for appear.in",
+    "private": true,
+    "main": "main.js",
+    "author": "Meadowcottage",
+    "license": "GNU General Public License",
+    "homepage": "https://github.com/Meadowcottage/appear.in/",
+    "keywords": [
+        "electron",
+        "appear.in"
+    ],
+    "bugs": {
+        "url": "https://github.com/Meadowcottage/appear.in/issues/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Meadowcottage/appear.in.git"
+    },
+    "dependencies": {
+        "electron-config": "^0.2.1",
+        "electron-context-menu": "^0.5.0",
+        "electron-dl": "^1.5.0",
+        "electron-is-dev": "^0.1.2"
+    }
 }

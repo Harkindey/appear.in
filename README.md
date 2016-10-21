@@ -1,21 +1,19 @@
-<img src="https://raw.githubusercontent.com/Meadowcottage/Appear.in/master/build/icon.png" align="left" width="192px" height="192px"/>
+<img src="https://raw.githubusercontent.com/Meadowcottage/appear.in/master/build/icon.png" align="left" width="192px" height="192px"/>
 <img align="left" width="0" height="192px" hspace="10"/>
 
-# Appear.in (UNOFFICIAL)
-> This is the unofficial [Appear.in](https://appear.in) web app. Built using the [Electron](http://electron.atom.io) framework to take the current live feed site and give it to you as a desktop app.
+# appear.in
+> This is the unofficial [appear.in](<%= website %>) web app. Built using the [Electron](http://electron.atom.io) framework to take the current live feed site and give it to you as a desktop app.
 
-[![Travis](https://img.shields.io/travis/Meadowcottage/appear.in/master.svg?style=flat-square)](https://travis-ci.org/Meadowcottage/Appear.in) [![Appveyor](https://img.shields.io/appveyor/ci/meadowcottage/Appear-in.svg?style=flat-square)](https://ci.appveyor.com/project/Meadowcottage/Appear-in) [![Release](https://img.shields.io/github/release/Meadowcottage/Appear.in.svg?style=flat-square)](https://github.com/Meadowcottage/Appear.in/releases) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?style=flat-square)](https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=bendixon50%40gmail%2ecom&item_name=Tip%20for%20Meadowcottage&currency_code=GBP) [![Downloads](https://img.shields.io/github/downloads/meadowcottage/Appear.in/total.svg?style=flat-square)](https://github.com/Meadowcottage/Appear.in/releases) [![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg?style=flat-square)](http://www.gnu.org/licenses/)
+[![Travis](https://img.shields.io/travis/Meadowcottage/appear.in/master.svg?style=flat-square)](https://travis-ci.org/Meadowcottage/appear.in) [![Appveyor](https://img.shields.io/appveyor/ci/Meadowcottage/appear.in.svg?style=flat-square)](https://ci.appveyor.com/project/Meadowcottage/appear.in) [![Release](https://img.shields.io/github/release/Meadowcottage/appear.in.svg?style=flat-square)](https://github.com/Meadowcottage/appear.in/releases) [![Downloads](https://img.shields.io/github/downloads/Meadowcottage/appear.in/total.svg?style=flat-square)](https://github.com/Meadowcottage/appear.in/releases) [![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg?style=flat-square)](http://www.gnu.org/licenses/)
 
-<br>
-<br>
+## Screenshots
 
-## Downloads
-> Downloads can be found on the [releases page](https://github.com/Meadowcottage/Appear.in/releases)
+[<img alt='appear.in' src="https://raw.githubusercontent.com/Meadowcottage/appear.in/master/build/Screenshot.png">](https://github.com/Meadowcottage/appear.in/releases)
 
 ## Development
 
 ```
-$ git clone https://github.com/Meadowcottage/Appear.in.git
+$ git clone https://github.com/Meadowcottage/appear.in.git
 $ npm install
 $ npm start
 $ npm run dist
@@ -23,9 +21,9 @@ $ npm run dist
 
 ## SUPPORT
 
-[<img width='45' height="45" align='left' alt='Appear.in' src="https://raw.githubusercontent.com/Meadowcottage/Appear.in/master/build/icon.png">](https://Appear.in) Most of the support for this app must go to the Appear.in team and the work they put in to make the platform itself. To support [Appear.in](https://creator.ionic.io/), who built the platform, feel free to check out their site for more details.
+[<img width='45' height="45" align='left' alt='appear.in' src="https://raw.githubusercontent.com/Meadowcottage/appear.in/master/build/icon.png">](<%= website %>) Most of the support for this app must go to the original site team and the work they put in to make the platform itself. To support [appear.in](<%= website %>), who built the platform, feel free to check out their site for more details.
 
-[<img width='45' height="45" align='left' alt='Github' src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">](https://github.com/Meadowcottage/Appear.in) Feel free to help support this unofficial app by submitting issues or bugs so we can resolve and fix them or even feel free to submit pull requests if you have already helped develop a fix for one of the bugs in the app.
+[<img width='45' height="45" align='left' alt='Github' src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">](https://github.com/Meadowcottage/appear.in) Feel free to help support this unofficial app by submitting issues or bugs so we can resolve and fix them or even feel free to submit pull requests if you have already helped develop a fix for one of the bugs in the app.
 
 ## License
 

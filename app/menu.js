@@ -13,10 +13,6 @@ var template_win = [{
         accelerator: 'Control+H',
         role: 'hide'
     }, {
-        label: 'Hide Others',
-        accelerator: 'Control+Shift+H',
-        role: 'hideothers'
-    }, {
         type: 'separator'
     }, {
         label: 'Quit',
@@ -71,12 +67,6 @@ var template_win = [{
             if (focusedWindow) focusedWindow.webContents.reload();
         }
     }, {
-        label: 'Toggle Theme',
-        accelerator: 'Control+D',
-        click() {
-            // Some code goes here.
-        }
-    }, {
         type: 'separator'
     }, {
         label: 'Toggle Fullscreen',
@@ -105,9 +95,9 @@ var template_win = [{
     label: 'Help',
     role: 'help',
     submenu: [{
-        label: 'About Appear.in',
+        label: 'About ' + app_name,
         click: function() {
-            require('electron').shell.openExternal("https://github.com/Meadowcottage/Appear.in/releases/tag/" + app_version)
+            require('electron').shell.openExternal("https://github.com/Meadowcottage/appear.in/releases/tag/" + app_version)
         }
     }, {
         label: 'Version ' + app_version,
@@ -115,7 +105,7 @@ var template_win = [{
     }, {
         type: 'separator'
     }, {
-        label: 'View Appear.in',
+        label: 'View ' + app_name,
         click: function() {
             require('electron').shell.openExternal("https://appear.in")
         }
@@ -124,7 +114,7 @@ var template_win = [{
     }, {
         label: 'Changelog',
         click: function() {
-            require('electron').shell.openExternal("https://github.com/Meadowcottage/Appear.in/releases/tag/" + app_version)
+            require('electron').shell.openExternal("https://github.com/Meadowcottage/appear.in/releases/tag/" + app_version)
         }
     }]
 }];
@@ -135,18 +125,6 @@ var template_osx = [{
         label: 'Hide ' + app_name,
         accelerator: 'Command+H',
         role: 'hide'
-    }, {
-        label: 'Hide Others',
-        accelerator: 'Command+Shift+H',
-        role: 'hideothers'
-    }, {
-        type: 'separator'
-    }, {
-        label: 'Toggle Theme',
-        accelerator: 'Cmd+D',
-        click() {
-            // Some code goes here.
-        }
     }, {
         type: 'separator'
     }, {
@@ -160,54 +138,47 @@ var template_osx = [{
     label: 'Edit',
     submenu: [{
         label: 'Undo',
-        accelerator: 'Cmd+Z',
+        accelerator: 'Command+Z',
         role: 'undo'
     }, {
         label: 'Redo',
-        accelerator: 'Shift+Cmd+Z',
+        accelerator: 'Shift+Command+Z',
         role: 'redo'
     }, {
         type: 'separator'
     }, {
         label: 'Cut',
-        accelerator: 'Cmd+X',
+        accelerator: 'Command+X',
         role: 'cut'
     }, {
         label: 'Copy',
-        accelerator: 'Cmd+C',
+        accelerator: 'Command+C',
         role: 'copy'
     }, {
         label: 'Paste',
-        accelerator: 'Cmd+V',
+        accelerator: 'Command+V',
         role: 'paste'
     }, {
         label: 'Select All',
-        accelerator: 'Cmd+A',
+        accelerator: 'Command+A',
         role: 'selectall'
     }]
 }, {
     label: 'View',
     submenu: [{
         label: 'Back',
-        accelerator: 'Backspace',
+        accelerator: 'Command+Left',
         click: function(item, focusedWindow) {
-            if (focusedWindow && focusedWindow.webContents.canGoBack())
-                focusedWindow.webContents.goBack();
+            if (focusedWindow) focusedWindow.webContents.goBack();
             focusedWindow.webContents.reload();
         }
     }, {
         type: 'separator'
     }, {
         label: 'Reload',
-        accelerator: 'F5',
+        accelerator: 'Command+R',
         click: function(item, focusedWindow) {
             if (focusedWindow) focusedWindow.webContents.reload();
-        }
-    }, {
-        label: 'Toggle Theme',
-        accelerator: 'Control+D',
-        click() {
-            // Some code goes here.
         }
     }, {
         type: 'separator'
@@ -227,20 +198,20 @@ var template_osx = [{
     role: 'window',
     submenu: [{
         label: 'Minimize',
-        accelerator: 'Cmd+M',
+        accelerator: 'Command+M',
         role: 'minimize'
     }, {
         label: 'Close',
-        accelerator: 'Cmd+W',
+        accelerator: 'Command+W',
         role: 'close'
     }]
 }, {
     label: 'Help',
     role: 'help',
     submenu: [{
-        label: 'About Appear.in',
+        label: 'About ' + app_name,
         click: function() {
-            require('electron').shell.openExternal("https://github.com/Meadowcottage/Appear.in/releases/tag/" + app_version)
+            require('electron').shell.openExternal("https://github.com/Meadowcottage/appear.in/releases/tag/" + app_version)
         }
     }, {
         label: 'Version ' + app_version,
@@ -248,7 +219,7 @@ var template_osx = [{
     }, {
         type: 'separator'
     }, {
-        label: 'View Appear.in',
+        label: 'View ' + app_name,
         click: function() {
             require('electron').shell.openExternal("https://appear.in")
         }
@@ -257,7 +228,7 @@ var template_osx = [{
     }, {
         label: 'Changelog',
         click: function() {
-            require('electron').shell.openExternal("https://github.com/Meadowcottage/Appear.in/releases/tag/" + app_version)
+            require('electron').shell.openExternal("https://github.com/Meadowcottage/appear.in/releases/tag/" + app_version)
         }
     }]
 }];
