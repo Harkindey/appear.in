@@ -5,7 +5,11 @@
     "description": "The unofficial electron app for appear.in",
     "private": true,
     "main": "main.js",
-    "author": "Meadowcottage",
+    "author": {
+      "name": "[MEADOW_DEV]",
+      "email": "meadow@meadowcottage.xyz",
+      "url": "meadowcottage.xyz"
+    },
     "license": "GNU General Public License",
     "homepage": "https://github.com/Meadowcottage/appear.in/",
     "keywords": [
