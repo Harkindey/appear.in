@@ -10,7 +10,7 @@ const app_name = app.getName();
 const app_title = app.getName();
 const app_version = app.getVersion();
 const app_description = 'The unofficial electron app for appear.in';
-const app_config = require('./config');
+const app_config = require('./lib/config.js');
 const app_is_dev = require('electron-is-dev');
 
 // System paths
@@ -24,7 +24,7 @@ require('electron-dl')();
 require('electron-context-menu')();
 
 // Main App Window
-let mainWindow
+let mainWindow;
 
 // If the application is quitting
 let isQuitting = false;
@@ -38,8 +38,6 @@ function createMainWindow() {
         y: lastWindowState.y,
         width: lastWindowState.width,
         height: lastWindowState.height,
-        minWidth: 850,
-        minHeight: 530,
         titleBarStyle: 'hidden-inset',
         center: true,
         movable: true,
@@ -69,7 +67,7 @@ function createMainWindow() {
 
 app.on('ready', () => {
     mainWindow = createMainWindow();
-    menu.setApplicationMenu(require('./menu'))
+    menu.setApplicationMenu(require('./lib/menu.js'))
     if (app_is_dev) {
         mainWindow.openDevTools()
     }
@@ -124,4 +122,7 @@ app.on('activate', () => {
 })
 app.on('before-quit', () => {
     isQuitting = true;
+    if (!mainWindow.isFullScreen()) {
+  		app_config.set('lastWindowState', mainWindow.getBounds());
+  	}
 });

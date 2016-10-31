@@ -1,12 +1,12 @@
 {
     "name": "appear.in",
     "productName": "appear.in",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "The unofficial electron app for appear.in",
     "private": true,
     "main": "main.js",
     "author": {
-      "name": "[MEADOW_DEV]",
+      "name": "Meadowcottage",
       "email": "meadow@meadowcottage.xyz",
       "url": "meadowcottage.xyz"
     },
