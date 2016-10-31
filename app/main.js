@@ -10,7 +10,7 @@ const app_name = app.getName();
 const app_title = app.getName();
 const app_version = app.getVersion();
 const app_description = 'The unofficial electron app for appear.in';
-const app_config = require('./lib/config.js');
+const app_config = require('./lib/config');
 const app_is_dev = require('electron-is-dev');
 
 // System paths
@@ -38,10 +38,13 @@ function createMainWindow() {
         y: lastWindowState.y,
         width: lastWindowState.width,
         height: lastWindowState.height,
+        minWidth: 850,
+        minHeight: 530,
         titleBarStyle: 'hidden-inset',
         center: true,
         movable: true,
         resizable: true,
+        fullscreenable: true,
         autoHideMenuBar: true,
         webPreferences: {
             nodeIntegration: false,
@@ -67,10 +70,8 @@ function createMainWindow() {
 
 app.on('ready', () => {
     mainWindow = createMainWindow();
-    menu.setApplicationMenu(require('./lib/menu.js'))
-    if (app_is_dev) {
-        mainWindow.openDevTools()
-    }
+    menu.setApplicationMenu(require('./lib/menu'))
+    if (app_is_dev) { mainWindow.openDevTools() }
 
     const app_page = mainWindow.webContents;
 
@@ -84,28 +85,30 @@ app.on('ready', () => {
             app_page.insertCSS('header.top-line { padding-left:82px!important; } div.content-wrapper { width:calc(100% - 65px)!important; float:right!important; } body > div.container > section.frontpage > section.frontpage-header > header { -webkit-app-region: drag!important; } body > div.wrapper.frontpage-content-wrapper > div > div > main > header > div > div.top-bar-button.contacts-button.selected { margin-left: 20px!important; }');
         }
 
-        // Global Code Additions
-        app_page.executeJavaScript(fs.readFileSync(path.join(__dirname, 'app.js'), 'utf8'));
-
         mainWindow.show();
 
-        //Open external links in browser
+        // Open external links in browser
         app_page.on('new-window', (e, url) => {
             e.preventDefault();
             electron.shell.openExternal(url);
         })
 
-        //Shortcut to reload the page.
-        globalShortcut.register('CmdOrCtrl+R', () => {
+        // Shortcut to reload the page.
+        globalShortcut.register('CmdOrCtrl+R', (item, focusedWindow) => {
+          if (focusedWindow){
             mainWindow.webContents.reload();
+          }
         })
-        globalShortcut.register('CmdOrCtrl+Left', () => {
-            mainWindow.webContents.goBack();
-            mainWindow.webContents.reload();
+        // Shortcut to go back a page.
+        globalShortcut.register('Command+Left', (item, focusedWindow) => {
+          if (focusedWindow && focusedWindow.webContents.canGoBack()){
+              focusedWindow.webContents.goBack();
+              focusedWindow.webContents.reload();
+          }
         })
 
+        // Navigate the window back when the user hits their mouse back button
         mainWindow.on('app-command', (e, cmd) => {
-            // Navigate the window back when the user hits their mouse back button
             if (cmd === 'browser-backward' && mainWindow.webContents.canGoBack()) {
                 mainWindow.webContents.goBack()
             }

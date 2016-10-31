@@ -54,9 +54,10 @@ var template_win = [{
         label: 'Back',
         accelerator: 'Backspace',
         click: function(item, focusedWindow) {
-            if (focusedWindow && focusedWindow.webContents.canGoBack())
-                focusedWindow.webContents.goBack();
+          if (focusedWindow && focusedWindow.webContents.canGoBack()) {
+            focusedWindow.webContents.goBack();
             focusedWindow.webContents.reload();
+          }
         }
     }, {
         type: 'separator'
@@ -169,8 +170,10 @@ var template_osx = [{
         label: 'Back',
         accelerator: 'Command+Left',
         click: function(item, focusedWindow) {
-            if (focusedWindow) focusedWindow.webContents.goBack();
+          if (focusedWindow && focusedWindow.webContents.canGoBack()) {
+            focusedWindow.webContents.goBack();
             focusedWindow.webContents.reload();
+          }
         }
     }, {
         type: 'separator'
